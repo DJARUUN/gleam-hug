@@ -261,7 +261,7 @@ fn underline_source(
 
         i if i == list_length -> {
           let line_length = string.length(line)
-          let line_length_post_trim = string.length(string.trim_left(line))
+          let line_length_post_trim = string.length(string.trim_start(line))
 
           let num_white_space = line_length - line_length_post_trim
 
@@ -273,7 +273,7 @@ fn underline_source(
 
         _ -> {
           let line_length = string.length(line)
-          let line_length_post_trim = string.length(string.trim_left(line))
+          let line_length_post_trim = string.length(string.trim_start(line))
 
           let num_white_space = line_length - line_length_post_trim
 
@@ -380,7 +380,7 @@ fn get_trim_left_amount(lines: List(String)) -> Int {
     string.length(line)
     - {
       line
-      |> string.trim_left()
+      |> string.trim_start()
       |> string.length()
     }
   }
@@ -401,7 +401,7 @@ fn get_trim_left_amount(lines: List(String)) -> Int {
         string.length(line)
         - {
           line
-          |> string.trim_left()
+          |> string.trim_start()
           |> string.length()
         }
 
